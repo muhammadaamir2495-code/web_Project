@@ -1,0 +1,575 @@
+/* =========================================
+   notes.css
+========================================= */
+
+
+
+/* =========================================
+   GLOBAL STYLING
+========================================= */
+
+body {
+    background: linear-gradient(
+        135deg,
+        #eff6ff,
+        #f8fafc
+    );
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode {
+    background: linear-gradient(
+        135deg,
+        #020617,
+        #0f172a
+    );
+    color: white;
+}
+
+
+
+/* =========================================
+   NOTES SECTION
+========================================= */
+
+.notes-section {
+    min-height: 100vh;
+}
+
+
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.notes-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+
+
+/* TITLE */
+
+.notes-topbar h2 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.notes-topbar p {
+    color: #64748b;
+    margin: 0;
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode .notes-topbar p {
+    color: #cbd5e1;
+}
+
+
+
+/* BUTTONS */
+
+.topbar-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+
+/* =========================================
+   ADD NOTE CARD
+========================================= */
+
+.add-note-card {
+    background: rgba(255,255,255,0.9);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding: 35px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+    margin-bottom: 35px;
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode .add-note-card {
+    background: rgba(15,23,42,0.92);
+    box-shadow: none;
+}
+
+
+
+/* TITLE */
+
+.add-note-card h4 {
+    font-weight: 700;
+}
+
+
+
+/* FORM */
+
+.form-control,
+.form-select {
+    padding: 16px 18px;
+    border-radius: 16px;
+    border: 1px solid #dbeafe;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+
+
+/* FOCUS */
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 0.2rem rgba(37,99,235,0.2);
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: white;
+}
+
+
+
+/* PLACEHOLDER */
+
+body.dark-mode .form-control::placeholder {
+    color: #94a3b8;
+}
+
+
+
+/* =========================================
+   FILTER SECTION
+========================================= */
+
+.filter-section {
+    background: rgba(255,255,255,0.9);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 25px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode .filter-section {
+    background: rgba(15,23,42,0.92);
+    box-shadow: none;
+}
+
+
+
+/* =========================================
+   NOTES GRID
+========================================= */
+
+.notes-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit,
+        minmax(320px, 1fr));
+
+    gap: 30px;
+}
+
+
+
+/* =========================================
+   NOTE CARD
+========================================= */
+
+.note-card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 28px;
+    padding: 28px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.06);
+    transition: 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+/* HOVER */
+
+.note-card:hover {
+    transform: translateY(-10px);
+}
+
+
+
+/* TOP BORDER EFFECT */
+
+.note-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(
+        90deg,
+        #2563eb,
+        #7c3aed
+    );
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode .note-card {
+    background: rgba(15,23,42,0.95);
+    box-shadow: none;
+}
+
+
+
+/* =========================================
+   NOTE TOP
+========================================= */
+
+.note-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+
+/* CATEGORY */
+
+.note-category {
+    background: #2563eb;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+
+
+/* ACTIONS */
+
+.note-actions {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+/* BUTTONS */
+
+.edit-btn,
+.delete-btn {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    transition: 0.3s ease;
+}
+
+
+
+/* EDIT */
+
+.edit-btn {
+    background: #0ea5e9;
+}
+
+
+
+/* DELETE */
+
+.delete-btn {
+    background: #ef4444;
+}
+
+
+
+/* HOVER */
+
+.edit-btn:hover,
+.delete-btn:hover {
+    transform: scale(1.08);
+}
+
+
+
+/* =========================================
+   NOTE CONTENT
+========================================= */
+
+.note-card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.note-card p {
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode .note-card p {
+    color: #cbd5e1;
+}
+
+
+
+/* =========================================
+   NOTE FOOTER
+========================================= */
+
+.note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 18px;
+}
+
+
+
+/* SMALL */
+
+.note-footer small {
+    color: #94a3b8;
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode .note-footer {
+    border-top: 1px solid #334155;
+}
+
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state {
+    text-align: center;
+    padding: 80px 20px;
+    display: none;
+}
+
+
+
+/* ICON */
+
+.empty-state i {
+    font-size: 5rem;
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+
+
+/* TITLE */
+
+.empty-state h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.empty-state p {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode .empty-state p {
+    color: #cbd5e1;
+}
+
+
+
+/* =========================================
+   TOAST NOTIFICATION
+========================================= */
+
+.notes-toast {
+    position: fixed;
+    top: 30px;
+    right: -400px;
+    background: #16a34a;
+    color: white;
+    padding: 18px 28px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    z-index: 9999;
+    transition: 0.5s ease;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+
+
+/* SHOW */
+
+.notes-toast.show {
+    right: 30px;
+}
+
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+.note-card,
+.add-note-card,
+.filter-section {
+    animation: fadeIn 1s ease;
+}
+
+
+
+/* KEYFRAMES */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 992px) {
+
+    .notes-topbar h2 {
+        font-size: 2rem;
+    }
+
+    .add-note-card {
+        padding: 28px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .notes-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .topbar-buttons {
+        width: 100%;
+    }
+
+    .topbar-buttons .btn {
+        flex: 1;
+    }
+
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+
+    .notes-topbar h2 {
+        font-size: 1.7rem;
+    }
+
+    .add-note-card,
+    .filter-section,
+    .note-card {
+        padding: 22px;
+    }
+
+    .note-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .note-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+
+
+/* =========================================
+   CUSTOM SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dbeafe;
+}

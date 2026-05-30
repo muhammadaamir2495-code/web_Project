@@ -1,0 +1,633 @@
+/* =========================================
+   dashboard.css
+========================================= */
+
+
+
+/* =========================================
+   GLOBAL DASHBOARD LAYOUT
+========================================= */
+
+body {
+    background: #f1f5f9;
+    font-family: 'Poppins', sans-serif;
+}
+
+body.dark-mode {
+    background: #020617;
+}
+
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100vh;
+    background: linear-gradient(
+        180deg,
+        #0f172a,
+        #1e293b
+    );
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: 0.4s ease;
+}
+
+
+
+/* LOGO */
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.sidebar-logo i {
+    width: 55px;
+    height: 55px;
+    border-radius: 15px;
+    background: #facc15;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* MENU */
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 18px;
+    border-radius: 15px;
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.sidebar-menu a i {
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: rgba(255, 255, 255, 0.08);
+    color: #facc15;
+    transform: translateX(5px);
+}
+
+
+
+/* SIDEBAR BUTTONS */
+
+.sidebar-bottom button {
+    padding: 14px;
+    border-radius: 14px;
+    font-weight: 600;
+}
+
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+    margin-left: 280px;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+
+
+/* =========================================
+   DASHBOARD HEADER
+========================================= */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+/* HEADER TEXT */
+
+.dashboard-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.header-subtitle {
+    color: #64748b;
+    margin-top: 8px;
+}
+
+
+
+/* PROFILE SECTION */
+
+.profile-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+
+/* NOTIFICATION */
+
+.notification-bell {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.notification-bell:hover {
+    transform: scale(1.08);
+}
+
+.notification-bell i {
+    font-size: 1.2rem;
+    color: #0f172a;
+}
+
+.notification-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* PROFILE */
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 10px 18px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.profile-info:hover {
+    transform: translateY(-3px);
+}
+
+.profile-info img {
+    /* Width and height managed via HTML inline styles in the updated code */
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info h6 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.profile-info small {
+    color: #64748b;
+}
+
+
+/* =========================================
+   DASHBOARD HERO BANNER (ADDED)
+========================================= */
+
+.dashboard-hero-banner {
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.dashboard-hero-banner img {
+    transition: transform 0.5s ease, filter 0.3s ease;
+    transform-origin: center;
+}
+
+.dashboard-hero-banner img:hover {
+    transform: scale(1.02);
+}
+
+
+/* =========================================
+   DASHBOARD CARDS
+========================================= */
+
+.dashboard-card {
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.05);
+    transition: 0.4s ease;
+    height: 100%;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-10px);
+}
+
+
+
+/* CARD ICON */
+
+.card-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    color: white;
+}
+
+.card-icon.purple {
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+}
+
+.card-icon.blue {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.card-icon.green {
+    background: linear-gradient(135deg, #059669, #10b981);
+}
+
+.card-icon.orange {
+    background: linear-gradient(135deg, #ea580c, #f97316);
+}
+
+
+
+/* CARD INFO */
+
+.card-info h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    margin: 0;
+    color: #64748b;
+}
+
+
+
+/* =========================================
+   ANALYTICS CARD
+========================================= */
+
+.analytics-card {
+    background: white;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+/* ADDED STYLING FOR ANALYTICS IMAGE */
+.analytics-card img {
+    transition: transform 0.4s ease;
+}
+
+.analytics-card img:hover {
+    transform: scale(1.03);
+}
+
+/* HEADER */
+
+.card-header-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card-header-custom h4 {
+    margin: 0;
+    font-weight: 700;
+}
+
+
+
+/* =========================================
+   PROGRESS BARS
+========================================= */
+
+.progress-item {
+    margin-bottom: 25px;
+}
+
+.progress-item span {
+    font-weight: 500;
+}
+
+.progress {
+    height: 12px;
+    border-radius: 30px;
+    margin-top: 10px;
+    background: #e2e8f0;
+}
+
+.progress-bar {
+    border-radius: 30px;
+}
+
+.progress-fill-90 {
+    width: 90%;
+}
+
+.progress-fill-85 {
+    width: 85%;
+}
+
+.progress-fill-78 {
+    width: 78%;
+}
+
+.progress-fill-92 {
+    width: 92%;
+}
+
+
+
+/* =========================================
+   TASK ITEMS
+========================================= */
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-item h6 {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.task-item small {
+    color: #64748b;
+}
+
+
+
+/* =========================================
+   ACTIVITY LIST
+========================================= */
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+
+/* ACTIVITY ITEM */
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.2s ease;
+}
+
+.activity-item:hover {
+    transform: translateX(5px);
+}
+
+
+/* ICON */
+
+.activity-icon {
+    /* Colors and background handled by HTML Bootstrap utility classes */
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.activity-item:hover .activity-icon {
+    transform: scale(1.1);
+}
+
+.activity-item h6 {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.activity-item small {
+    color: #64748b;
+}
+
+
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark-mode .dashboard-header h2,
+body.dark-mode .card-header-custom h4,
+body.dark-mode .card-info h3,
+body.dark-mode .task-item h6,
+body.dark-mode .activity-item h6,
+body.dark-mode .profile-info h6 {
+    color: white;
+}
+
+body.dark-mode .header-subtitle,
+body.dark-mode .card-info p,
+body.dark-mode .task-item small,
+body.dark-mode .activity-item small,
+body.dark-mode .profile-info small {
+    color: #cbd5e1;
+}
+
+body.dark-mode .dashboard-card,
+body.dark-mode .analytics-card,
+body.dark-mode .profile-info,
+body.dark-mode .notification-bell {
+    background: #0f172a;
+    box-shadow: none;
+}
+
+body.dark-mode .progress {
+    background: #1e293b;
+}
+
+/* ADDED DARK MODE IMAGE OPACITY */
+body.dark-mode .dashboard-hero-banner img,
+body.dark-mode .analytics-card img {
+    opacity: 0.85;
+    filter: brightness(0.9) contrast(1.1);
+}
+
+
+
+/* =========================================
+   CUSTOM SCROLLBAR
+========================================= */
+
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+}
+
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .sidebar {
+        width: 250px;
+    }
+
+    .main-content {
+        margin-left: 250px;
+    }
+}
+
+
+
+@media (max-width: 992px) {
+
+    .sidebar {
+        position: fixed;
+        left: -100%;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .main-content {
+        padding: 20px;
+    }
+
+    .dashboard-card {
+        padding: 25px;
+    }
+
+    .dashboard-header h2 {
+        font-size: 1.6rem;
+    }
+
+    .card-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .profile-section {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+
+    .dashboard-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .analytics-card {
+        padding: 20px;
+    }
+
+    .profile-info {
+        padding: 10px;
+    }
+
+    .profile-info img {
+        /* Mobile overrides if needed, but handled mostly by inline */
+        width: 45px;
+        height: 45px;
+    }
+}

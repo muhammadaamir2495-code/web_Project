@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Student Progress Tracker | Smart Learning Portal</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+    <link rel="stylesheet"
+        href="css/progress.css">
+
+</head>
+
+<body>
+
+    <section class="progress-section py-5">
+
+        <div class="container">
+
+            <div class="progress-topbar d-flex flex-wrap justify-content-between align-items-center mb-5">
+
+                <div>
+
+                    <h2>
+                        Student Progress Tracker
+                    </h2>
+
+                    <p class="text-muted mb-0">
+                        Track academic performance and learning progress.
+                    </p>
+
+                </div>
+
+                <div class="topbar-buttons mt-3 mt-md-0 d-flex gap-2">
+
+                    <button id="themeBtn"
+                        class="btn btn-warning rounded-pill fw-medium px-4">
+
+                        <i class="fa-solid fa-moon me-2"></i>
+
+                        Dark Mode
+
+                    </button>
+
+                    <a href="dashboard.html"
+                        class="btn btn-dark rounded-pill fw-medium px-4">
+
+                        <i class="fa-solid fa-arrow-left me-2"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="row g-4 mb-5">
+
+                <div class="col-md-4">
+
+                    <div class="progress-card text-center p-4 shadow-sm bg-white rounded">
+
+                        <div class="card-icon card-icon-sm bg-primary bg-opacity-10 text-primary rounded-circle d-inline-flex justify-content-center align-items-center mb-3">
+
+                            <i class="fa-solid fa-book-open"></i>
+
+                        </div>
+
+                        <h3 id="totalCourses" class="fw-bold">
+                            0
+                        </h3>
+
+                        <p class="text-muted mb-0">
+                            Total Courses
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="progress-card text-center p-4 shadow-sm bg-white rounded">
+
+                        <div class="card-icon card-icon-sm bg-success bg-opacity-10 text-success rounded-circle d-inline-flex justify-content-center align-items-center mb-3">
+
+                            <i class="fa-solid fa-circle-check"></i>
+
+                        </div>
+
+                        <h3 id="completedCourses" class="fw-bold">
+                            0
+                        </h3>
+
+                        <p class="text-muted mb-0">
+                            Completed Courses
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="progress-card text-center p-4 shadow-sm bg-white rounded">
+
+                        <div class="card-icon card-icon-sm bg-warning bg-opacity-10 text-warning rounded-circle d-inline-flex justify-content-center align-items-center mb-3">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                        </div>
+
+                        <h3 id="averageProgress" class="fw-bold">
+                            0%
+                        </h3>
+
+                        <p class="text-muted mb-0">
+                            Average Progress
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="progress-form-card p-4 shadow-sm bg-white rounded mb-5">
+
+                <div class="text-center mb-3">
+                    <img src="images/badges/achievement_badges.webp" alt="Achievement Badges" class="img-fluid img-sm">
+                </div>
+
+                <h3 class="mb-4 fw-semibold text-center border-bottom pb-3">
+                    Add Course Progress
+                </h3>
+
+                <form id="progressForm">
+
+                    <div class="row g-4">
+
+                        <div class="col-md-4">
+
+                            <label class="form-label fw-medium">
+                                Course Name
+                            </label>
+
+                            <input type="text"
+                                id="courseName"
+                                class="form-control bg-light"
+                                placeholder="Enter course name"
+                                required>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <label class="form-label fw-medium">
+                                Instructor
+                            </label>
+
+                            <input type="text"
+                                id="courseInstructor"
+                                class="form-control bg-light"
+                                placeholder="Instructor name"
+                                required>
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <label class="form-label fw-medium">
+                                Progress (%)
+                            </label>
+
+                            <input type="number"
+                                id="courseProgress"
+                                class="form-control bg-light"
+                                placeholder="0 - 100"
+                                min="0"
+                                max="100"
+                                required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="text-center mt-4 pt-2">
+                        <button type="submit"
+                            class="btn btn-primary px-5 py-2 fw-semibold rounded-pill">
+
+                            <i class="fa-solid fa-plus me-2"></i>
+
+                            Add Progress
+
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="progress-table-card p-4 shadow-sm bg-white rounded">
+
+                <div class="table-header d-flex flex-wrap justify-content-between align-items-center mb-4">
+
+                    <h3 class="fw-semibold mb-0">
+                        Course Progress Records
+                    </h3>
+
+                    <button id="deleteAllBtn"
+                        class="btn btn-danger rounded-pill px-4 fw-medium mt-3 mt-md-0">
+
+                        <i class="fa-solid fa-trash-can me-2"></i> Delete All
+
+                    </button>
+
+                </div>
+
+                <div class="table-responsive">
+
+                    <table class="table table-hover align-middle">
+
+                        <thead class="table-light">
+
+                            <tr>
+
+                                <th>
+                                    Course
+                                </th>
+
+                                <th>
+                                    Instructor
+                                </th>
+
+                                <th>
+                                    Progress
+                                </th>
+
+                                <th>
+                                    Status
+                                </th>
+
+                                <th>
+                                    Action
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="progressTableBody">
+
+                            </tbody>
+
+                    </table>
+
+                </div>
+
+                <div id="emptyState"
+                    class="empty-state text-center py-5 mt-3">
+
+                    <img src="images/illustrations/empty_state.png" alt="No Progress Records" class="img-fluid mb-4 img-md">
+
+                    <h4 class="fw-semibold">
+                        No Progress Records
+                    </h4>
+
+                    <p class="text-muted">
+                        Add course progress to track your learning journey.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/progress.js"></script>
+
+</body>
+
+</html>

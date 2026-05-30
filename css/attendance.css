@@ -1,0 +1,559 @@
+/* =========================================
+   attendance.css
+========================================= */
+
+
+
+/* =========================================
+   GLOBAL STYLING
+========================================= */
+
+body {
+    background: linear-gradient(
+        135deg,
+        #eff6ff,
+        #f8fafc
+    );
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode {
+    background: linear-gradient(
+        135deg,
+        #020617,
+        #0f172a
+    );
+    color: white;
+}
+
+
+
+/* =========================================
+   ATTENDANCE SECTION
+========================================= */
+
+.attendance-section {
+    min-height: 100vh;
+}
+
+
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.attendance-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+
+
+/* TITLE */
+
+.attendance-topbar h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.attendance-topbar p {
+    color: #64748b;
+    margin: 0;
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode .attendance-topbar p {
+    color: #cbd5e1;
+}
+
+
+
+/* BUTTONS */
+
+.topbar-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+
+/* =========================================
+   ATTENDANCE CARDS
+========================================= */
+
+.attendance-card {
+    background: rgba(255,255,255,0.92);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 28px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+    transition: 0.4s ease;
+}
+
+
+
+/* HOVER */
+
+.attendance-card:hover {
+    transform: translateY(-10px);
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode .attendance-card {
+    background: rgba(15,23,42,0.92);
+    box-shadow: none;
+}
+
+
+
+/* ICON */
+
+.card-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.8rem;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+
+
+/* TITLE */
+
+.attendance-card h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.attendance-card p {
+    color: #64748b;
+    margin: 0;
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode .attendance-card p {
+    color: #cbd5e1;
+}
+
+
+
+/* =========================================
+   FORM CARD
+========================================= */
+
+.attendance-form-card {
+    background: rgba(255,255,255,0.92);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding: 35px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode .attendance-form-card {
+    background: rgba(15,23,42,0.92);
+    box-shadow: none;
+}
+
+
+
+/* FORM TITLE */
+
+.attendance-form-card h3 {
+    font-weight: 700;
+}
+
+
+
+/* FORM INPUTS */
+
+.form-control,
+.form-select {
+    padding: 16px 18px;
+    border-radius: 16px;
+    border: 1px solid #dbeafe;
+    transition: 0.3s ease;
+}
+
+
+
+/* FOCUS */
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 0.2rem rgba(37,99,235,0.2);
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode .form-control,
+body.dark-mode .form-select {
+    background: #1e293b;
+    border: 1px solid #334155;
+    color: white;
+}
+
+
+
+/* =========================================
+   TABLE CARD
+========================================= */
+
+.attendance-table-card {
+    background: rgba(255,255,255,0.92);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding: 35px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.08);
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode .attendance-table-card {
+    background: rgba(15,23,42,0.92);
+    box-shadow: none;
+}
+
+
+
+/* TABLE HEADER */
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+
+
+/* TITLE */
+
+.table-header h3 {
+    font-weight: 700;
+    margin: 0;
+}
+
+
+
+/* TABLE */
+
+.table {
+    margin: 0;
+}
+
+
+
+/* HEAD */
+
+.table thead tr {
+    background: #2563eb;
+    color: white;
+}
+
+
+
+/* TH */
+
+.table th {
+    padding: 18px;
+    border: none;
+}
+
+
+
+/* TD */
+
+.table td {
+    padding: 18px;
+    vertical-align: middle;
+    transition: 0.3s ease;
+}
+
+
+
+/* ROW */
+
+.table tbody tr {
+    transition: 0.3s ease;
+}
+
+
+
+/* HOVER */
+
+.table tbody tr:hover {
+    background: rgba(37,99,235,0.06);
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode .table {
+    color: white;
+}
+
+body.dark-mode .table tbody tr:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    display: none;
+    animation: fadeIn 0.6s ease;
+}
+
+/* ADDED IMAGE STYLING */
+.empty-state img {
+    margin: 0 auto;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.05));
+    transition: 0.3s ease;
+}
+
+/* FALLBACK ICON */
+.empty-state i {
+    font-size: 5rem;
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+
+
+/* TITLE */
+
+.empty-state h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #64748b;
+}
+
+
+
+/* DARK MODE */
+
+body.dark-mode .empty-state p {
+    color: #cbd5e1;
+}
+
+/* ADDED DARK MODE IMAGE TWEAK */
+body.dark-mode .empty-state img {
+    opacity: 0.85; 
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.2));
+}
+
+
+
+/* =========================================
+   TOAST NOTIFICATION
+========================================= */
+
+.attendance-toast {
+    position: fixed;
+    top: 30px;
+    right: -400px;
+    background: #16a34a;
+    color: white;
+    padding: 18px 28px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+    z-index: 9999;
+    transition: 0.5s ease;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+
+
+/* SHOW */
+
+.attendance-toast.show {
+    right: 30px;
+}
+
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn {
+    transition: 0.3s ease;
+}
+
+
+
+/* HOVER */
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+.attendance-card,
+.attendance-form-card,
+.attendance-table-card {
+    animation: fadeIn 1s ease;
+}
+
+
+
+/* KEYFRAMES */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 992px) {
+
+    .attendance-topbar h2 {
+        font-size: 2rem;
+    }
+
+    .attendance-card,
+    .attendance-form-card,
+    .attendance-table-card {
+        padding: 28px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .attendance-topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .topbar-buttons {
+        width: 100%;
+    }
+
+    .topbar-buttons .btn {
+        flex: 1;
+    }
+
+    .table-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+
+    .attendance-topbar h2 {
+        font-size: 1.7rem;
+    }
+
+    .attendance-card,
+    .attendance-form-card,
+    .attendance-table-card {
+        padding: 22px;
+    }
+
+    .attendance-card h3 {
+        font-size: 2rem;
+    }
+
+    .table th,
+    .table td {
+        padding: 14px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* =========================================
+   CUSTOM SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2563eb;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: #dbeafe;
+}
